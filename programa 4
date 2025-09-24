@@ -1,0 +1,31 @@
+def procesar_edades():
+    edades = []
+    
+    print("ingrese las edades de 10 personas:")
+    for i in range(10):
+        while True:
+            try:
+                edad = int(input(f"Ingrese la edad de la persona {i+1}: "))
+                if edad >= 0:
+                    edades.append(edad)
+                    break
+                else:
+                    print("La edad no puede ser un número negativo. Intentalo de nuevo.")
+            except ValueError:
+                print("Entrada no válida. ingrese un número entero.")
+    
+    mayores_de_edad = 0
+    menores_de_edad = 0
+    
+    for edad in edades:
+        if edad >= 18:
+            mayores_de_edad += 1
+        else:
+            menores_de_edad += 1
+            
+    print("\n--- Resultados ---")
+    print(f"Número de personas mayores de edad: {mayores_de_edad}")
+    print(f"Número de personas menores de edad: {menores_de_edad}")
+    print("------------------")
+
+procesar_edades()

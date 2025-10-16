@@ -1,0 +1,19 @@
+shopping_list = []
+shopping_list = ['Watch', 'Laptop', 'Footwear', 'Pen', 'Clothing']
+shopping_list.append('Football')
+first_item = shopping_list[0]
+last_item = shopping_list[-1]
+
+pen_index = shopping_list.index('Pen')
+shopping_list[pen_index] = 'Notebook'
+
+shopping_list.remove('Clothing')
+
+print("Lista completa (6):")
+print(shopping_list)
+
+print("\nArtículos específicos (7):")
+print(shopping_list[1], "y", shopping_list[2])
+
+print("\nLista final (10):")
+print(shopping_list)
